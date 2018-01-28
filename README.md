@@ -12,5 +12,5 @@ and creates out.jpg
 
 ## what it does
 
-drunk_render.py uses the Pillow library extensively.
+drunk_render.py uses the Pillow library for image manipulation.
 It grabs a point on an existing image, randomly chooses a direction, and may change course when it reaches a dark pixel.
