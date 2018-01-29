@@ -13,4 +13,4 @@ and creates out.jpg
 ## what it does
 
 drunk_render.py uses the Pillow library for image manipulation.
-It grabs a point on an existing image, randomly chooses a direction, and may change course when it reaches a dark pixel.
+It grabs a point on an existing image, does some stuff, and copies it to a new image. It may change direction when it reaches a dark pixel but most of the time it continues in a particular direction.
