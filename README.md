@@ -7,7 +7,15 @@ takes an existing image
 
 $ python3 drunk_render.py clint.jpg
 
-and creates out.jpg
+and creates out.png
+
+--ani
+
+causes it to also create out.mp4
+
+--steps
+
+determines the number of iterations that will be drawn. the default is 1,000
 
 
 ## what it does
