@@ -19,7 +19,7 @@ determines the number of iterations that will be drawn. the default is 1,000
 
 --effect
 
-there are multiple image effects. current list: drunk_walk,pink_blue, retina_bleed, static
+there are multiple image effects. current list: drunk_walk, pink_blue, retina_bleed, static
 
 ## what it does
 
