@@ -9,8 +9,7 @@ from shutil import which
 from helper import (image_resize, edge_bounce, wall_func, bright_limit,
 					edge_test, clean_up_points, make_mp4)
 
-import importdir
-importdir.do("effects",globals())
+from effects import effects
 
 # argparse
 parser = argparse.ArgumentParser()
@@ -33,14 +32,14 @@ for file in listdir("effects/"):
 		else: effect_list.append(file.split('.')[0])
 
 effects_string = ("image effects:\n\t " + "\n\t".join(sorted(effect_list)))
-parser.add_argument("--effect",	help=effects_string)
+parser.add_argument("--effect",	default="pink_blue", help=effects_string)
 
 args = parser.parse_args()
 
 image_file_name = args.image
 
-if args.effect: effect = eval(args.effect)
-else: effect = pink_blue
+effect = getattr(effects, args.effect)
+
 
 if args.walls: walls_on = True
 else: walls_on = False
@@ -91,7 +90,7 @@ for m in range(0,steps):
 						vectors[i][0][0],
 						vectors[i][0][1],
 						vectors[i][1])
-		
+
 	# make sure vectors are in bounds
 	vectors = clean_up_points(vectors, img.size[0], img.size[1])
 	# saves image for animation later
